@@ -1,6 +1,8 @@
-/* =========================
-   RESET + GLOBAL
-========================= */
+/* =========================================
+   BONTLE JWA BOTSWANA — FINAL CSS
+========================================= */
+
+/* RESET */
 
 *{
     margin: 0;
@@ -14,14 +16,14 @@ html{
 
 body{
     font-family: Georgia, "Times New Roman", serif;
-    background: #f4efe6;
+    background: #f5f1ea;
     color: #222;
     line-height: 1.7;
 }
 
-/* =========================
+/* =========================================
    CONTAINER
-========================= */
+========================================= */
 
 .container{
     width: 90%;
@@ -29,12 +31,12 @@ body{
     margin: auto;
 }
 
-/* =========================
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 header{
-    background: rgba(0,0,0,0.95);
+    background: rgba(0,0,0,0.92);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -57,34 +59,18 @@ header h1{
 nav a{
     color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 18px;
     font-size: 14px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 nav a:hover{
     color: #d4af37;
 }
 
-/* =========================
+/* =========================================
    HERO SECTIONS
-========================= */
-
-.hero-text{
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-    color: white;
-
-    z-index: 5;
-
-    width: 100%;
-}
+========================================= */
 
 .home-hero,
 .about-hero,
@@ -94,96 +80,76 @@ nav a:hover{
 .attractions-hero,
 .gallery-hero,
 .contact-hero{
-    height: 100vh;
     position: relative;
-
-    text-align: center;
-
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 /* HERO IMAGES */
 
-.home-hero{
-    background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('images/hero.jpg');
+.home-hero img,
+.about-hero img,
+.culture-hero img,
+.festival-hero img,
+.legend-hero img,
+.attractions-hero img,
+.gallery-hero img,
+.contact-hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.about-hero{
-    background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('images/about-banner.jpg');
+/* DARK OVERLAY */
+
+.home-hero::after,
+.about-hero::after,
+.culture-hero::after,
+.festival-hero::after,
+.legend-hero::after,
+.attractions-hero::after,
+.gallery-hero::after,
+.contact-hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
 }
 
-.culture-hero{
-    background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('images/culture-banner.jpg');
-}
-
-.festival-hero{
-    background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('images/festival-banner.jpg');
-}
-
-.legend-hero{
-    background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('images/legend-banner.jpg');
-}
-
-.attractions-hero{
-    background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('images/attractions-banner.jpg');
-}
-
-.gallery-hero{
-    background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('images/gallery-banner.jpg');
-}
-
-.contact-hero{
-    background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('images/contact-banner.jpg');
-}
-
-/* =========================
-   HERO TEXT
-========================= */
+/* HERO TEXT */
 
 .hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     color: white;
-    z-index: 2;
-    padding: 20px;
+    z-index: 5;
+    width: 90%;
 }
 
 .hero-text h2{
-    font-size: 70px;
-    letter-spacing: 3px;
+    font-size: 68px;
     margin-bottom: 15px;
     text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .hero-text p{
-    font-size: 18px;
-    letter-spacing: 3px;
+    font-size: 20px;
+    letter-spacing: 2px;
 }
 
-/* =========================
+/* =========================================
    SEARCH BAR
-========================= */
+========================================= */
 
 .search-section{
-    margin-top: -40px;
+    margin-top: -45px;
     position: relative;
     z-index: 10;
 }
@@ -194,81 +160,174 @@ nav a:hover{
 
 .search-icon{
     position: absolute;
-    left: 20px;
     top: 50%;
+    left: 22px;
     transform: translateY(-50%);
-    color: #777;
+    color: #666;
     font-size: 18px;
 }
 
 #searchInput{
     width: 100%;
-    padding: 16px 20px 16px 50px;
+    padding: 16px 20px 16px 55px;
     border: none;
-    border-radius: 40px;
-    font-size: 16px;
+    border-radius: 50px;
     outline: none;
-
-    background: rgba(255,255,255,0.9);
-
+    font-size: 16px;
+    background: rgba(255,255,255,0.95);
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* =========================
+/* =========================================
    SECTIONS
-========================= */
+========================================= */
 
 section{
     padding: 80px 0;
 }
 
 section:nth-child(even){
-    background: #ede5d8;
+    background: #eee5d6;
 }
 
 h3{
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 20px;
     text-align: center;
+    color: #111;
 }
 
-/* =========================
+/* =========================================
    INTRO TEXT
-========================= */
+========================================= */
 
-.festival-intro{
+.festival-intro,
+.attractions-intro,
+.contact-section{
     text-align: center;
 }
 
-.festival-intro p{
+.festival-intro p,
+.attractions-intro p,
+.contact-section p{
     max-width: 850px;
     margin: auto;
     margin-bottom: 15px;
     font-size: 17px;
 }
 
-/* =========================
+/* =========================================
+   ABOUT PAGE LAYOUT
+========================================= */
+
+.two-column{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.section-image{
+    flex: 1;
+}
+
+.section-image img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.section-text{
+    flex: 1;
+}
+
+.section-text h3{
+    text-align: left;
+}
+
+.section-text p{
+    margin-bottom: 15px;
+}
+
+/* FACTS GRID */
+
+.facts-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+}
+
+.fact-card{
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.fact-card h4{
+    margin-bottom: 10px;
+    color: #b8860b;
+}
+
+/* PRESIDENTS */
+
+.presidents-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.president-card{
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.president-card:hover{
+    transform: translateY(-8px);
+}
+
+.president-card img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.president-card h4{
+    margin: 18px 10px 10px;
+}
+
+.president-card p{
+    padding: 0 15px 20px;
+}
+
+/* =========================================
    CARDS
-========================= */
+========================================= */
 
 .card-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 25px;
     margin-top: 40px;
 }
 
 .card{
-    background: rgba(255,255,255,0.8);
-
+    background: rgba(255,255,255,0.9);
     border-radius: 20px;
     overflow: hidden;
-
     transition: 0.4s;
-
-    backdrop-filter: blur(10px);
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .card:hover{
@@ -279,67 +338,101 @@ h3{
     width: 100%;
     height: 240px;
     object-fit: cover;
+    display: block;
 }
 
 .card h4{
-    margin: 20px 20px 10px;
+    margin: 18px 18px 10px;
     font-size: 22px;
 }
 
 .card p{
-    margin: 0 20px 20px;
+    margin: 0 18px 20px;
     font-size: 15px;
 }
 
-/* =========================
+/* =========================================
    FEATURE SECTION
-========================= */
+========================================= */
 
-.feature-section{
+.feature-section,
+.story-section{
     display: flex;
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
 }
 
-.feature-image{
+.feature-image,
+.story-image{
     flex: 1;
 }
 
-.feature-image img{
+.feature-image img,
+.story-image img{
     width: 100%;
-    border-radius: 20px;
+    height: 450px;
     object-fit: cover;
+    border-radius: 20px;
 }
 
-.feature-text{
+.feature-text,
+.story-text{
     flex: 1;
 }
 
-.feature-text h3{
+.feature-text h3,
+.story-text h3{
     text-align: left;
 }
 
-.feature-text p{
+.feature-text p,
+.story-text p{
     margin-bottom: 15px;
-    font-size: 17px;
 }
 
-/* =========================
+/* =========================================
+   FOOD SECTION
+========================================= */
+
+.food-row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.food-row div{
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.food-row img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* =========================================
    GALLERY
-========================= */
+========================================= */
 
 .gallery-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 20px;
 }
 
 .gallery-container img{
     width: 100%;
-    height: 250px;
+    height: 260px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 18px;
     transition: 0.4s;
 }
 
@@ -347,14 +440,15 @@ h3{
     transform: scale(1.03);
 }
 
-/* =========================
+/* =========================================
    CONTACT
-========================= */
+========================================= */
 
 .contact-container{
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+    margin-top: 40px;
 }
 
 form{
@@ -367,11 +461,10 @@ form input,
 form textarea{
     padding: 15px;
     margin-bottom: 15px;
-
     border: none;
-    border-radius: 10px;
-
+    border-radius: 12px;
     background: white;
+    font-size: 15px;
 }
 
 form textarea{
@@ -381,11 +474,9 @@ form textarea{
 form button{
     padding: 15px;
     border: none;
-    border-radius: 10px;
-
+    border-radius: 12px;
     background: black;
     color: white;
-
     cursor: pointer;
     transition: 0.3s;
 }
@@ -399,9 +490,9 @@ form button:hover{
     flex: 1;
 }
 
-/* =========================
+/* =========================================
    MAP
-========================= */
+========================================= */
 
 iframe{
     width: 100%;
@@ -410,15 +501,15 @@ iframe{
     border-radius: 20px;
 }
 
-/* =========================
+/* =========================================
    QUOTE SECTION
-========================= */
+========================================= */
 
 .quote-section{
     background: black;
     color: white;
     text-align: center;
-    padding: 70px 20px;
+    padding: 80px 20px;
 }
 
 .quote-section p{
@@ -426,9 +517,9 @@ iframe{
     font-style: italic;
 }
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer{
     background: #000;
@@ -437,9 +528,9 @@ footer{
     padding: 25px;
 }
 
-/* =========================
-   ANIMATIONS
-========================= */
+/* =========================================
+   ANIMATION
+========================================= */
 
 section{
     animation: fadeIn 1s ease;
@@ -457,11 +548,11 @@ section{
     }
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+/* =========================================
+   RESPONSIVE
+========================================= */
 
-@media(max-width: 768px){
+@media(max-width: 900px){
 
     header .container{
         flex-direction: column;
@@ -478,18 +569,34 @@ section{
     }
 
     .hero-text h2{
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .hero-text p{
         font-size: 16px;
     }
 
-    .feature-section{
+    .feature-section,
+    .story-section,
+    .two-column,
+    .reverse,
+    .contact-container{
         flex-direction: column;
     }
 
+    .feature-text h3,
+    .story-text h3,
+    .section-text h3{
+        text-align: center;
+    }
+
     h3{
-        font-size: 30px;
+        font-size: 32px;
+    }
+
+    .section-image img,
+    .feature-image img,
+    .story-image img{
+        height: 320px;
     }
 }
